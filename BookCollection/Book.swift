@@ -16,18 +16,24 @@ class Book {
     var ean : [String]?
     var thumbnailStr : String?
     var smallThumbnailStr : String?
+    var quantity : Int = 0
+    
+    init(book : BookJSONVolumeInfo) {
+        self.title = book.title
+        self.authors = book.authors
+        self.description = book.descriptionValue
+        self.ean = []
+        for industry in (book.industryIdentifiers)! {
+            self.ean?.append(industry.identifier!)
+        }
+        self.thumbnailStr = book.imageLinks?.thumbnail
+        self.smallThumbnailStr = book.imageLinks?.smallThumbnail
+    }
 
     
     func isValid() -> Bool {
         return title != nil
     }
     
-//    init(snapshot: FIRDataSnapshot) {
-//        key = snapshot.key
-//        let snapshotValue = snapshot.value as! [String: AnyObject]
-//        name = snapshotValue["name"] as! String
-//        addedByUser = snapshotValue["addedByUser"] as! String
-//        completed = snapshotValue["completed"] as! Bool
-//        ref = snapshot.ref
-//    }
+    
 }

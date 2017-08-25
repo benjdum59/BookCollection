@@ -6,6 +6,7 @@ use_frameworks!
 target 'BookCollection' do
 pod 'Firebase', '~> 4.1'
 pod 'SwiftyJSON', '~> 3.1'
+pod 'Alamofire', '~> 4.5'
 end
 
 target 'BookCollectionTests' do

@@ -8,4 +8,18 @@
 
 import Foundation
 
-
+class BookBLL {
+    enum infotype : String{
+        case FromWS
+        case FromFIR
+    }
+    
+    private let bookGoogleApiSAL = BookGoogleApiSAL()
+    
+    
+    func getBookInformation(ean: String, infotype: infotype = infotype.FromWS, completion: @escaping (Book?, Error?) -> Void) {
+        bookGoogleApiSAL.getBookInformation(ean: ean) { (bookJSON, error) in
+            completion(Book(book: bookJSON!), nil)
+        }
+    }
+}

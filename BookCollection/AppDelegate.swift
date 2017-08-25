@@ -7,15 +7,26 @@
 //
 
 import UIKit
+import Firebase
+
+//let dataManager :DataManager = (UIApplication.sharedApplication.delegate as! AppDelegate).dataManager
+
+let dataManager : DataManager = (UIApplication.shared.delegate as! AppDelegate).dataManager
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    let dataManager: DataManager = DataManager()
+
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+
         return true
     }
 
