@@ -17,6 +17,8 @@ class BookDetailViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var smallImageView: UIImageView!
     @IBOutlet weak var bigImageView: UIImageView!
     
+    private var currentBook : Book?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,7 @@ class BookDetailViewController : UIViewController, UITextFieldDelegate {
     @IBAction func action(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "Actions", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         let saveAction = UIAlertAction(title: "Save", style: UIAlertActionStyle.default) { (action) in
-            
+            self.save()
         }
         let deleteAction = UIAlertAction(title: "Delete All", style: UIAlertActionStyle.destructive) { (action) in
             
@@ -49,15 +51,27 @@ class BookDetailViewController : UIViewController, UITextFieldDelegate {
 
     }
     
+    private func save(){
+        initBookFromForm()
+        guard self.currentBook != nil && self.currentBook!.isValid() else {
+            return
+        }
+        dataManager.bookBLL.saveBook(book: self.currentBook!)
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if(textField == eanTextField) {
             dataManager.bookBLL.getBookInformation(ean: eanTextField.text!, completion: { (book, error) in
-                self.initForm(book: book!)
+                self.currentBook = book
+                self.initForm()
             })
         }
     }
     
-    private func initForm(book: Book) {
+    private func initForm() {
+        guard let book = currentBook else {
+            return
+        }
         if (self.titleTextField.text!.isEmpty()) {
             self.titleTextField.text = book.title ?? ""
         }
@@ -68,10 +82,10 @@ class BookDetailViewController : UIViewController, UITextFieldDelegate {
             self.descriptionTextView.text = book.description ?? ""
         }
         self.quantityTextField.text = String(book.quantity)
-        
     }
     
     private func initBookFromForm(){
+        self.currentBook = Book(title: titleTextField.text, authors: authorsTextField.text?.toArray(), description: descriptionTextView.text, ean: eanTextField.text, thumbnail: nil, smallThumbnail: nil, quantity: quantityTextField.text?.toInt() ?? 0)
         
     }
     

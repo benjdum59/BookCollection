@@ -16,4 +16,19 @@ extension String {
     public func trim()->String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }
+    
+    public func toArray(delimiter: String = ",") -> [String] {
+        var array : [String] = []
+        for value in self.components(separatedBy: delimiter) {
+            array.append(value.trim())
+        }
+        return array
+    }
+    
+    public func toInt()->Int{
+        guard !self.isEmpty() else {
+            return 0
+        }
+        return Int(self) ?? 0
+    }
 }

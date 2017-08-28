@@ -7,6 +7,7 @@ target 'BookCollection' do
 pod 'Firebase', '~> 4.1'
 pod 'SwiftyJSON', '~> 3.1'
 pod 'Alamofire', '~> 4.5'
+pod 'FirebaseDatabase', '~> 4.0'
 end
 
 target 'BookCollectionTests' do

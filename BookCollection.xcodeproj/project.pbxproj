@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03406A3B1F5064E800BBD52F /* BookFIR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03406A3A1F5064E800BBD52F /* BookFIR.swift */; };
 		0344C6B81F4EB6A200B0453E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0344C6B71F4EB6A200B0453E /* DataManager.swift */; };
 		0344C6BB1F4EB6DA00B0453E /* BookBLL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0344C6BA1F4EB6DA00B0453E /* BookBLL.swift */; };
 		0344C6BD1F4EB6F800B0453E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0344C6BC1F4EB6F800B0453E /* Book.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03406A3A1F5064E800BBD52F /* BookFIR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookFIR.swift; sourceTree = "<group>"; };
 		0344C6B71F4EB6A200B0453E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0344C6BA1F4EB6DA00B0453E /* BookBLL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookBLL.swift; sourceTree = "<group>"; };
 		0344C6BC1F4EB6F800B0453E /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -127,9 +129,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03406A391F5064C200BBD52F /* FIR */ = {
+			isa = PBXGroup;
+			children = (
+				03406A3A1F5064E800BBD52F /* BookFIR.swift */,
+			);
+			name = FIR;
+			sourceTree = "<group>";
+		};
 		0344C6B61F4EB68600B0453E /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				03406A391F5064C200BBD52F /* FIR */,
 				0365FEE11F4F0888009FECEC /* SAL */,
 				0344C6B91F4EB6B500B0453E /* BLL */,
 				0344C6B71F4EB6A200B0453E /* DataManager.swift */,
@@ -472,6 +483,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -479,6 +491,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,6 +621,7 @@
 				0344C6C01F4EC3AB00B0453E /* String+Utils.swift in Sources */,
 				03524D571F4DABA5004AD704 /* BookJSONEpub.swift in Sources */,
 				03524D561F4DABA5004AD704 /* BookJSONBase.swift in Sources */,
+				03406A3B1F5064E800BBD52F /* BookFIR.swift in Sources */,
 				0344C6BD1F4EB6F800B0453E /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

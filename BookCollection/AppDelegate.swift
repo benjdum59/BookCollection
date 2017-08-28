@@ -8,11 +8,12 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 //let dataManager :DataManager = (UIApplication.sharedApplication.delegate as! AppDelegate).dataManager
 
 let dataManager : DataManager = (UIApplication.shared.delegate as! AppDelegate).dataManager
-
+let database = Database.database().reference(withPath: "books")
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
