@@ -18,14 +18,15 @@ class BookGoogleApiSAL {
     private let maxResultKey = "maxResult"
     private let maxResultValue = 1
     
-    func getBookInformation(ean:String, completion:@escaping (BookJSONVolumeInfo?, Error?) -> Void) {
+    func getBookInformation(ean:String, completion:@escaping (BookJSONVolumeInfo?, NSError?) -> Void) {
         let parameters = [
             queryKey : "isbn:" + ean,
             maxResultKey : maxResultValue
         ] as [String : Any]
         Alamofire.request(url, method: HTTPMethod.get, parameters: parameters).responseJSON { (response) in
             guard let data = response.data else {
-                completion(nil, nil)
+            let error = NSError(domain: "No data", code: -1, userInfo: nil)
+                completion(nil, error)
                 return
             }
             let json = JSON(data: data)

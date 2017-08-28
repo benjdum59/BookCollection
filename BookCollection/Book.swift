@@ -19,6 +19,7 @@ class Book {
     var smallThumbnailStr : String?
     var quantity : Int = 0
     let ref: DatabaseReference?
+    let key : String?
 
     
     init(book : BookJSONVolumeInfo) {
@@ -28,9 +29,10 @@ class Book {
         self.thumbnailStr = book.imageLinks?.thumbnail
         self.smallThumbnailStr = book.imageLinks?.smallThumbnail
         self.ref = nil
+        self.key = nil
     }
     
-    init(title:String?, authors:[String]?, description: String?, ean: String?, thumbnail: String?, smallThumbnail: String?, quantity: Int = 0) {
+    init(title:String?, authors:[String]?, description: String?, ean: String?, thumbnail: String?, smallThumbnail: String?, quantity: Int = 0, key: String? = nil) {
         self.title = title
         self.authors = authors
         self.description = description
@@ -39,9 +41,11 @@ class Book {
         self.smallThumbnailStr = smallThumbnail
         self.quantity = quantity
         self.ref = nil
+        self.key = key
     }
     
     init(snapshot: DataSnapshot) {
+        key = snapshot.key
         let snapshotValue = snapshot.value as! [String: AnyObject]
         title = snapshotValue["title"] as? String
         authors = snapshotValue["authors"] as? [String]
@@ -49,8 +53,9 @@ class Book {
         ean = snapshotValue["ean"] as? String
         thumbnailStr = snapshotValue["thumbnail"] as? String
         smallThumbnailStr = snapshotValue["smallThumbnail"] as? String
-        quantity = snapshotValue["quantity"] as! Int
+        quantity = snapshotValue["quantity"] as? Int ?? 0
         ref = snapshot.ref
+        
     }
     
     func toAnyObject() -> Any {

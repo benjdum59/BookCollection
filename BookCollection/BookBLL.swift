@@ -20,14 +20,22 @@ class BookBLL {
     
     
     func getBookInformation(ean: String, infotype: infotype = infotype.FromWS, completion: @escaping (Book?, Error?) -> Void) {
-        bookGoogleApiSAL.getBookInformation(ean: ean) { (bookJSON, error) in
-            guard let bookJSON = bookJSON else {
-                completion(nil, nil )
+        
+        //Get info from FIR
+        bookFIR.getBook(ean: ean) { (bookFIR) in
+            if bookFIR != nil {
+                completion(bookFIR, nil)
                 return
             }
-            let book = Book(book: bookJSON)
-            book.ean = ean
-            completion(book, nil)
+            self.bookGoogleApiSAL.getBookInformation(ean: ean) { (bookJSON, error) in
+                guard let bookJSON = bookJSON else {
+                    completion(nil, error )
+                    return
+                }
+                let book = Book(book: bookJSON)
+                book.ean = ean
+                completion(book, error)
+            }
         }
     }
     

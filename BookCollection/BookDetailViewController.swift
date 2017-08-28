@@ -85,7 +85,7 @@ class BookDetailViewController : UIViewController, UITextFieldDelegate {
     }
     
     private func initBookFromForm(){
-        self.currentBook = Book(title: titleTextField.text, authors: authorsTextField.text?.toArray(), description: descriptionTextView.text, ean: eanTextField.text, thumbnail: nil, smallThumbnail: nil, quantity: quantityTextField.text?.toInt() ?? 0)
+        self.currentBook = Book(title: titleTextField.text, authors: authorsTextField.text?.toArray(), description: descriptionTextView.text, ean: eanTextField.text, thumbnail: nil, smallThumbnail: nil, quantity: quantityTextField.text?.toInt() ?? 0, key:self.currentBook?.key)
         
     }
     
