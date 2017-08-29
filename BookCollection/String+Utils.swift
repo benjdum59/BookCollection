@@ -31,4 +31,8 @@ extension String {
         }
         return Int(self) ?? 0
     }
+    
+    public func toURL()->URL? {
+        return URL(string: self)
+    }
 }

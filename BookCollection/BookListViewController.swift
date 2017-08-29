@@ -8,17 +8,45 @@
 
 import UIKit
 
-class BookListViewController: UIViewController, MoreMenuBarDelegate {
+class BookListViewController: UIViewController, MoreMenuBarDelegate, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var booksTableView: UITableView!
 
     var sideMenubarLeft:MTSideMenubar!
     var arrBtnImageListLeft = [MTSideMenuImageList]()
+    var books : [Book] = []
+    var selectedBook : Book!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initMenu()
+        dataManager.bookBLL.getBooks { (books) in
+            self.books = books
+            self.booksTableView.reloadData()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return books.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell") as! BookCell
+        cell.initWithBook(book: books[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedBook = books[indexPath.row]
+        self.performSegue(withIdentifier: "toDetail", sender: self)
+    }
+    
+    private func initMenu() {
         
         //Left Side Menu bar Create
         arrBtnImageListLeft.append(MTSideMenuImageList(imgButton: UIImage(named: "scan")!))
         arrBtnImageListLeft.append(MTSideMenuImageList(imgButton: UIImage(named: "logout")!))
-
+        
         
         var heightOfMenuBarLeft = (DeviceScale.SCALE_X * 20.0) //Top-Bottom Spacing
         heightOfMenuBarLeft += ((DeviceScale.SCALE_X * 16.66) * CGFloat((arrBtnImageListLeft.count - 1))) //Button between spacing
@@ -29,6 +57,8 @@ class BookListViewController: UIViewController, MoreMenuBarDelegate {
         sideMenubarLeft = MTSideMenubar.init(frame: CGRect(x: (ScreenSize.WIDTH - (DeviceScale.SCALE_X * 84.0)),y: originYOfMenuBarLeft,width: (DeviceScale.SCALE_X * 84.0),height: heightOfMenuBarLeft)).createUI(view: self.view, arrBtnImageList: arrBtnImageListLeft) as! MTSideMenubar
         sideMenubarLeft.delegate = self
     }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,6 +90,13 @@ class BookListViewController: UIViewController, MoreMenuBarDelegate {
             break
         }
 
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            let destinationVC = segue.destination as! BookDetailViewController
+            destinationVC.currentBook = selectedBook
+        }
     }
 
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0330A5491F54634900F61F6C /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0330A5481F54634900F61F6C /* UIImageView+Utils.swift */; };
 		03406A3B1F5064E800BBD52F /* BookFIR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03406A3A1F5064E800BBD52F /* BookFIR.swift */; };
 		0344C6B81F4EB6A200B0453E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0344C6B71F4EB6A200B0453E /* DataManager.swift */; };
 		0344C6BB1F4EB6DA00B0453E /* BookBLL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0344C6BA1F4EB6DA00B0453E /* BookBLL.swift */; };
@@ -32,6 +33,9 @@
 		03524D5E1F4DABA5004AD704 /* BookJSONSearchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03524D531F4DABA5004AD704 /* BookJSONSearchInfo.swift */; };
 		03524D5F1F4DABA5004AD704 /* BookJSONVolumeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03524D541F4DABA5004AD704 /* BookJSONVolumeInfo.swift */; };
 		0365FEE31F4F08A3009FECEC /* BookGoogleApiSAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0365FEE21F4F08A3009FECEC /* BookGoogleApiSAL.swift */; };
+		03BE75F61F5595A500D7E42B /* UIView+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE75F51F5595A500D7E42B /* UIView+Designable.swift */; };
+		03BE75FA1F5596FD00D7E42B /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE75F91F5596FD00D7E42B /* BookCell.swift */; };
+		03BE75FD1F55B6B300D7E42B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BE75FC1F55B6B300D7E42B /* Alert.swift */; };
 		03E5DF771F50135000BC71B3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03E5DF761F50135000BC71B3 /* GoogleService-Info.plist */; };
 		03E5DF791F50243400BC71B3 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E5DF781F50243400BC71B3 /* BookDetailViewController.swift */; };
 		3AB9255614D9837E72B05DBF /* Pods_BookCollection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A671E4838F79A2077BC4C270 /* Pods_BookCollection.framework */; };
@@ -57,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0330A5481F54634900F61F6C /* UIImageView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 		03406A3A1F5064E800BBD52F /* BookFIR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookFIR.swift; sourceTree = "<group>"; };
 		0344C6B71F4EB6A200B0453E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0344C6BA1F4EB6DA00B0453E /* BookBLL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookBLL.swift; sourceTree = "<group>"; };
@@ -88,6 +93,9 @@
 		03524D531F4DABA5004AD704 /* BookJSONSearchInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookJSONSearchInfo.swift; sourceTree = "<group>"; };
 		03524D541F4DABA5004AD704 /* BookJSONVolumeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookJSONVolumeInfo.swift; sourceTree = "<group>"; };
 		0365FEE21F4F08A3009FECEC /* BookGoogleApiSAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookGoogleApiSAL.swift; sourceTree = "<group>"; };
+		03BE75F51F5595A500D7E42B /* UIView+Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
+		03BE75F91F5596FD00D7E42B /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		03BE75FC1F55B6B300D7E42B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		03E5DF761F50135000BC71B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03E5DF781F50243400BC71B3 /* BookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		25A1CDB880ECCFAAF71D7209 /* Pods-BookCollection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookCollection.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookCollection/Pods-BookCollection.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				0344C6BF1F4EC3AB00B0453E /* String+Utils.swift */,
+				0330A5481F54634900F61F6C /* UIImageView+Utils.swift */,
+				03BE75F51F5595A500D7E42B /* UIView+Designable.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -225,8 +235,9 @@
 		03524D441F4DA6F2004AD704 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				03524D161F4D718D004AD704 /* BookListViewController.swift */,
-				03E5DF781F50243400BC71B3 /* BookDetailViewController.swift */,
+				03BE75FB1F55B6A800D7E42B /* Alert */,
+				03BE75F81F5596DE00D7E42B /* BookDetail */,
+				03BE75F71F5596D400D7E42B /* BookList */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -272,6 +283,31 @@
 				0365FEE21F4F08A3009FECEC /* BookGoogleApiSAL.swift */,
 			);
 			name = SAL;
+			sourceTree = "<group>";
+		};
+		03BE75F71F5596D400D7E42B /* BookList */ = {
+			isa = PBXGroup;
+			children = (
+				03524D161F4D718D004AD704 /* BookListViewController.swift */,
+				03BE75F91F5596FD00D7E42B /* BookCell.swift */,
+			);
+			name = BookList;
+			sourceTree = "<group>";
+		};
+		03BE75F81F5596DE00D7E42B /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				03E5DF781F50243400BC71B3 /* BookDetailViewController.swift */,
+			);
+			name = BookDetail;
+			sourceTree = "<group>";
+		};
+		03BE75FB1F55B6A800D7E42B /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				03BE75FC1F55B6B300D7E42B /* Alert.swift */,
+			);
+			name = Alert;
 			sourceTree = "<group>";
 		};
 		5DF51BA0D930CD144D6667C1 /* Frameworks */ = {
@@ -481,6 +517,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BookCollection/Pods-BookCollection-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -489,6 +526,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -602,10 +640,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BE75FD1F55B6B300D7E42B /* Alert.swift in Sources */,
 				03524D5C1F4DABA5004AD704 /* BookJSONReadingModes.swift in Sources */,
 				0365FEE31F4F08A3009FECEC /* BookGoogleApiSAL.swift in Sources */,
 				0344C6B81F4EB6A200B0453E /* DataManager.swift in Sources */,
 				03524D5F1F4DABA5004AD704 /* BookJSONVolumeInfo.swift in Sources */,
+				0330A5491F54634900F61F6C /* UIImageView+Utils.swift in Sources */,
 				03524D5B1F4DABA5004AD704 /* BookJSONPdf.swift in Sources */,
 				03524D171F4D718D004AD704 /* BookListViewController.swift in Sources */,
 				03524D551F4DABA5004AD704 /* BookJSONAccessInfo.swift in Sources */,
@@ -613,6 +653,8 @@
 				03524D151F4D718D004AD704 /* AppDelegate.swift in Sources */,
 				03524D431F4D72AC004AD704 /* MTSideMenubar.swift in Sources */,
 				03524D591F4DABA5004AD704 /* BookJSONIndustryIdentifiers.swift in Sources */,
+				03BE75FA1F5596FD00D7E42B /* BookCell.swift in Sources */,
+				03BE75F61F5595A500D7E42B /* UIView+Designable.swift in Sources */,
 				03524D581F4DABA5004AD704 /* BookJSONImageLinks.swift in Sources */,
 				03524D5D1F4DABA5004AD704 /* BookJSONSaleInfo.swift in Sources */,
 				03524D5A1F4DABA5004AD704 /* BookJSONItems.swift in Sources */,

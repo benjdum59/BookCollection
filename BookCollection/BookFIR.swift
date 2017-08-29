@@ -29,4 +29,14 @@ class BookFIR {
             completion(Book(snapshot: book))
         })
     }
+    
+    func getBooks(completion:@escaping ([Book]) -> Void) {
+        database.observe(.value, with: { (snapshot) in
+            var books : [Book] = []
+            for item in snapshot.children.allObjects {
+                books.append(Book(snapshot: item as! DataSnapshot))
+            }
+            completion(books)
+        })
+    }
 }

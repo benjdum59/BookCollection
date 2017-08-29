@@ -39,6 +39,12 @@ class BookBLL {
         }
     }
     
+    func getBooks(completion: @escaping ([Book]) -> Void){
+        bookFIR.getBooks { (books) in
+            completion(books)
+        }
+    }
+    
     func saveBook(book: Book) {
         bookFIR.saveBook(book: book)
     }
