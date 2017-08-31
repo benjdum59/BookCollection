@@ -13,12 +13,11 @@ import FirebaseDatabase
 //let dataManager :DataManager = (UIApplication.sharedApplication.delegate as! AppDelegate).dataManager
 
 let dataManager : DataManager = (UIApplication.shared.delegate as! AppDelegate).dataManager
-let database = Database.database().reference(withPath: "books")
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let dataManager: DataManager = DataManager()
+    var dataManager: DataManager!
 
 
     var window: UIWindow?
@@ -27,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        dataManager = DataManager()
 
         return true
     }

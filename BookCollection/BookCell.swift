@@ -21,5 +21,10 @@ class BookCell : UITableViewCell {
         self.eanLabel.text = book.ean ?? ""
         self.authorsLabel.text = ""
         self.quantityLabel.text = String(book.quantity)
+        if (book.imageStored && book.imageData == nil) {
+            dataManager.bookBLL.getCover(book: book, completion: {
+                self.coverImageView.image = book.imageData
+            })
+        }
     }
 }

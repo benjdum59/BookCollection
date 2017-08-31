@@ -11,6 +11,7 @@ import Alamofire
 import AlamofireImage
 
 extension UIImageView {
+        
     func getDataFromUrl(url:URL) {
         Alamofire.request(url).responseImage { (response) in
             debugPrint(response.result)

@@ -92,6 +92,15 @@ class BookListViewController: UIViewController, MoreMenuBarDelegate, UITableView
 
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        let book = books[indexPath.row]
+//        if (book.imageStored && book.imageData == nil) {
+//            dataManager.bookBLL.getCover(book: book, completion: {
+//
+//            })
+//        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             let destinationVC = segue.destination as! BookDetailViewController

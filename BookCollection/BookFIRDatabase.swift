@@ -9,12 +9,22 @@
 import Foundation
 import FirebaseDatabase
 
-class BookFIR {
-    func saveBook(book: Book) {
+class BookFIRDatabase {
+    
+    let database = Database.database().reference(withPath: "books")
+
+    
+    func saveBook(book: Book, completion: @escaping(Error?) -> Void) {
+        let ref : DatabaseReference
         if book.key == nil {
-            database.childByAutoId().setValue(book.toAnyObject())
-        } else {
-            database.child(book.key!).setValue(book.toAnyObject())
+            ref = database.childByAutoId()
+     } else {
+            ref = database.child(book.key!)
+        }
+        book.imageStored = book.imageData != nil
+        ref.setValue(book.toAnyObject()) { (error, reference) in
+            book.key = reference.key 
+            completion(error)
         }
     }
     

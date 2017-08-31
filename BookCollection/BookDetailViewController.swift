@@ -14,7 +14,6 @@ class BookDetailViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var quantityTextField: UITextField!
     @IBOutlet weak var authorsTextField: UITextField!
-    @IBOutlet weak var smallImageView: UIImageView!
     @IBOutlet weak var bigImageView: UIImageView!
     
     var currentBook : Book?
@@ -67,6 +66,7 @@ class BookDetailViewController : UIViewController, UITextFieldDelegate {
     }
     
     private func save(){
+//        self.currentBook!.imageStored = self.currentBook!.imageData != nil
         dataManager.bookBLL.saveBook(book: self.currentBook!)
         self.navigationController?.popViewController(animated: true)
     }
@@ -97,15 +97,15 @@ class BookDetailViewController : UIViewController, UITextFieldDelegate {
             self.descriptionTextView.text = book.description ?? ""
         }
         self.quantityTextField.text = String(book.quantity)
-        self.smallImageView.getDataFromUrl(str: book.smallThumbnailStr)
-        self.bigImageView.getDataFromUrl(str: book.thumbnailStr)
+        self.bigImageView.getDataFromUrl(str: book.imgUrlStr)
         
         
     }
     
     private func initBookFromForm(){
-        self.currentBook = Book(title: titleTextField.text, authors: authorsTextField.text?.toArray(), description: descriptionTextView.text, ean: eanTextField.text, thumbnail: nil, smallThumbnail: nil, quantity: quantityTextField.text?.toInt() ?? 0, key:self.currentBook?.key)
-        
+        self.currentBook = Book(title: self.titleTextField.text, authors: self.authorsTextField.text?.toArray(), description: self.descriptionTextView.text, ean: self.eanTextField.text, thumbnail: nil, quantity: quantityTextField.text?.toInt() ?? 0, key:self.currentBook?.key, image: bigImageView.image)
+
+ 
     }
     
 }
