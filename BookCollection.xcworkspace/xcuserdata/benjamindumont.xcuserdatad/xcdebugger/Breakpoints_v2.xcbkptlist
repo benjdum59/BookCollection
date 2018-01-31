@@ -61,106 +61,10 @@
             timestampString = "525864781.892478"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "saveBook(book:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BookCollection.BookBLL.saveBook (book : BookCollection.Book) -&gt; ()"
-                  moduleName = "BookCollection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benjamindumont/Documents/Development/iOS/BookCollection/BookCollection/BookBLL.swift"
-                  timestampString = "525865559.02765"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BookCollection.BookBLL.(saveBook (book : BookCollection.Book) -&gt; ()).(closure #1)"
-                  moduleName = "BookCollection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benjamindumont/Documents/Development/iOS/BookCollection/BookCollection/BookBLL.swift"
-                  timestampString = "525865559.029758"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookCollection/BookBLL.swift"
-            timestampString = "525864781.892478"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
             endingLineNumber = "60"
             landmarkName = "saveBook(book:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BookCollection/BookBLL.swift"
-            timestampString = "525864781.892478"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "saveBook(book:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BookCollection.BookBLL.(saveBook (book : BookCollection.Book) -&gt; ()).(closure #1)"
-                  moduleName = "BookCollection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benjamindumont/Documents/Development/iOS/BookCollection/BookCollection/BookBLL.swift"
-                  timestampString = "525865559.042178"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "166">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BookCollection.BookBLL.(saveBook (book : BookCollection.Book) -&gt; ()).(closure #1).(closure #1)"
-                  moduleName = "BookCollection"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/benjamindumont/Documents/Development/iOS/BookCollection/BookCollection/BookBLL.swift"
-                  timestampString = "525865559.044261"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "1108">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,7 +122,7 @@
                   moduleName = "BookCollection"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/benjamindumont/Documents/Development/iOS/BookCollection/BookCollection/BookFIRDatabase.swift"
-                  timestampString = "525865559.0622"
+                  timestampString = "525958295.915806"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -233,7 +137,7 @@
                   moduleName = "BookCollection"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/benjamindumont/Documents/Development/iOS/BookCollection/BookCollection/BookFIRDatabase.swift"
-                  timestampString = "525865559.064521"
+                  timestampString = "525958295.918442"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "26"

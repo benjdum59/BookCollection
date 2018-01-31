@@ -67,7 +67,7 @@ class Book {
             "thumbnail": imgUrlStr ?? "",
             "quantity" : quantity,
             "imageStored" : imageStored
-        ]
+        ]        
     }
 
     
